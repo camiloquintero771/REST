@@ -1,14 +1,14 @@
-
-Initial setup
+# API PROJECT
+# Initial setup
 You must create a file in the root of the project with the name .env with the following data:
 
-#Django
+### Django
 DEBUG=True
 SECRET_KEY='django-insecure-qzc%(1g4q$#3z$v1n+#bxxxq%04^(xm)f0mhbyt=d2ltvsrw0r'
 TZ=America/Bogota    
 DJANGO_SETTINGS_MODULE=restapi.settings.local
     
-#Postgres    
+### Postgres    
 POSTGRES_DB=restapi_db
 POSTGRES_USER=restapi_user
 POSTGRES_PASSWORD=restapi2021**.
@@ -28,7 +28,7 @@ $ make up
 
 If you have problems connecting Django with Postgres, you should run the command: make restart CONTAINER=django
 
-Other commands
+# Other commands
 Create a new app: make startapp NAME=example
 Generate migrations: make migrate
 Create a superuser: make superuser
