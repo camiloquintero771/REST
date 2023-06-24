@@ -36,3 +36,12 @@ Sort packages in the requirements.txt file
 First you need to add the package to the requirements.txt file, then you run the make build command. Finally, so that the packages are ordered and with their version established in the requirements.txt file, you must execute the following command.
 
 $ make get-requirements
+
+# END POINTS
+
+1. to create and list users
+https://1d0a-2800-484-b68c-ab1c-b550-caac-1d17-7414.ngrok-free.app/usuario/usuario_created
+2. to update and delete users
+https://1d0a-2800-484-b68c-ab1c-b550-caac-1d17-7414.ngrok-free.app/usuario/usuario/1
+
+    the final number of the url can change as indicated by the user id
