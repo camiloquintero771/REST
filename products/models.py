@@ -45,7 +45,7 @@ class CategoryProduct(BaseModel):
         verbose_name_plural = 'Categorías de Productos'
 
     def __str__(self):
-        return self.description
+        return self.desciption
 
 class Indicator(BaseModel):
     """Model definition for Indicator."""

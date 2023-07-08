@@ -1,14 +1,14 @@
+from rest_framework import viewsets
 from products.api.serializers.general_serializers import *
-from base.api import GenericListAPIView
 
 
-class MeasureUnitListAPIView(GenericListAPIView):
+class MeasureUnitListAPIView(viewsets.ModelViewSet):
     serializer_class = MeasureUnitSerializer
 
 
-class CategoryProductListAPIView(GenericListAPIView):
+class CategoryProductListAPIView(viewsets.ModelViewSet):
     serializer_class = CategoryProductSerializer
 
 
-class IndicatorListAPIView(GenericListAPIView):
+class IndicatorListAPIView(viewsets.ModelViewSet):
     serializer_class = IndicatorSerializer

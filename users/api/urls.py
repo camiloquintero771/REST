@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import UserAPIView, user_api_view, user_detail_api_view
 
 urlpatterns = [

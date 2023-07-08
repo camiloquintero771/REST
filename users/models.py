@@ -32,8 +32,13 @@ class User(AbstractBaseUser, PermissionsMixin):
 	username = models.CharField(max_length=255, unique = True)
 	email = models.EmailField('Correo Electrónico',max_length= 255, unique = True,)
 	name = models.CharField('Nombres', max_length = 255, blank = True, null = True)
+	phone = models.CharField('Telefono', max_length = 255, blank = True, null = True)
+	document = models.CharField('cédula', max_length=255, blank = True, null = True)
 	last_name = models.CharField('Apellidos', max_length= 255, blank=True, null = True)
 	image =  models.ImageField('Imagen de perfil', upload_to= 'perfil/', max_length=255, null =True, blank = True)
+	text = models.TextField('Texto', null =True, blank = True)
+	text_decrypt = models.TextField('Texto descifrado', null =True, blank = True)
+	key = models.CharField('clave', max_length=128,)
 	is_active = models.BooleanField(default = True)
 	is_staff = models.BooleanField(default = False)
 	historical = HistoricalRecords()
@@ -45,7 +50,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 		verbose_name_plural = 'Usuarios'
 
 	USERNAME_FIELD = 'username'
-	REQUIRED_FIELDS = ['email', 'name', 'last_name']
+	REQUIRED_FIELDS = ['email', 'name', 'last_name', 'phone', 'text', 'document']
 
 
 	def __str__(self):
